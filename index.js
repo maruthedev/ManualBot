@@ -1,9 +1,16 @@
 const Discord = require('discord.js');
 const config = require('./config.json');
-const bot = new Discord.Client();
+const bot = new Discord.Client(
+    {
+        intents: [
+            Discord.GatewayIntentBits.Guilds,
+            Discord.GatewayIntentBits.GuildMessages,
+            Discord.GatewayIntentBits.MessageContent,
+            Discord.GatewayIntentBits.GuildMembers
+        ]
+    }
+);
 const ytdl = require('ytdl-core');
-const fetch = require('node-fetch');
-
 var connection = null;
 var player = null;
 
@@ -11,7 +18,7 @@ bot.on('ready', () => {
     console.log('bot is ready');
     bot.user.setPresence({
         activity: {
-            name: 'BÔNG LAN CHUỐI MỨNG',
+            name: 'Zzz',
             type: 'LISTENING',
         },
         status: 'online'
