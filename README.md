@@ -1,4 +1,1 @@
-# DiscordJS_ManualBot
-
-A JavaScript Discord Bot 
-(Discordjs bản cũ chưa cập nhật :D )
+# Discord bot using Discordjs
